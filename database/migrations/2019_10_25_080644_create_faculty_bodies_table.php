@@ -15,6 +15,8 @@ class CreateFacultyBodiesTable extends Migration
     {
         Schema::create('faculty_bodies', function (Blueprint $table) {
             $table->string('fid');
+            $table->string('name');
+            $table->integer('idno');
             $table->string('bodyname');
             $table->string('bodyid')->unique();
             $table->string('paiddate');

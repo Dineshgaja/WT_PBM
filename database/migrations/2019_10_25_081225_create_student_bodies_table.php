@@ -15,6 +15,8 @@ class CreateStudentBodiesTable extends Migration
     {
         Schema::create('student_bodies', function (Blueprint $table) {
             $table->string('sid');
+            $table->string('name');
+            $table->integer('idno');
             $table->string('bodyname');
             $table->string('bodyid')->unique();
             $table->string('paiddate');

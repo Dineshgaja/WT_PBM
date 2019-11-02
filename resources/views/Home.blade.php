@@ -85,10 +85,10 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Register</a>
-                    <a href="https://blog.laravel.com">Events</a>
-                    <a href="https://nova.laravel.com">help</a>
-                    <a href="https://forge.laravel.com">etc</a>
+                    <a href="http://wtbeta.com/register">Register</a>
+                    <a href="http://wtbeta.com/events">Events</a>
+                    <a href="http://wtbeta.com/">help</a>
+                    <a href="http://forge.laravel.com">etc</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
             </div>

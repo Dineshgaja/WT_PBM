@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Body Management</title>
+        <title>Professional Body Management</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -81,18 +81,15 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Welcome Prof. Vidya Balan
+                    Welcome Prof. Vidya
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">New Registrations</a>
-                    <a href="https://laracasts.com">Faculty</a>
-                    <a href="https://laravel-news.com">Student</a>
-                    <a href="https://blog.laravel.com">Events</a>
+                    <a href="http://wtbeta.com/admin/registrations">New Registrations</a>
+                    <a href="http://wtbeta.com/admin/facultyview">Faculty</a>
+                    <a href="http://wtbeta.com/admin/studentview">Student</a>
+                    <a href="http://wtbeta.com/admin/eventview">Events</a>
                     <a href="https://nova.laravel.com">help</a>
-                    <a href="https://forge.laravel.com">etc</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
             </div>
         </div>
