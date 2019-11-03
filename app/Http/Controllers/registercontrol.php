@@ -40,45 +40,40 @@ class registercontrol extends Controller
      */
     public function store(Request $request){
         $this->validate($request,[
-            'type'=> 'required',
             'idno' => 'required',
             'name' => 'required',
             'bname' => 'required',
-            'bid' => 'required'
+            'phno' => 'required',
+            'email' => 'required'
         ]);
 
-        if(request('type')=='F')
-            $c=faculties::where('idno',request('idno'));
-        else $c=students::where('idno',request('idno'));
-        if($c->count()==1 and request('type')=='F'){
-            $id=$c->first()->fid;
-            $type='faculty';
-            $check=faculty_bodies::where('bodyid',request('bid'))->count();
-            $post=new faculty_bodies();
-            $post->fid=$id;
-        }
-        elseif($c->count()==1 and request('type')=='S'){
-            $id=$c->first()->sid;
-            $type='student';
-            $check=student_bodies::where('bodyid',request('bid'))->count();
-            $post=new student_bodies();
-            $post->sid=$id;
+        
+        $c=students::where('idno',request('idno'));
+        if ($c->count()==1) {
+       
+        $id=$c->first()->sid;
+        $check=student_bodies::where('idno',request('idno'))->get();
         }
         else{
             echo "<script>alert(\"idcard number not found\");</script>";
             return view('register');
         }
-        if($check==1){
-            echo "<script>alert(\"this idno is already present with that bodyid\");</script>";
-            return view('Home');
+        if($check->count()!=0){
+            foreach ($check as $key) {
+                if($key->first()->bodyname==request('bname')){
+                    echo "<script>alert(\"this idno is already present with that bodyname\");</script>";
+                    return view('Home');
+                }
+            }
         }
 
-        
+        $post=new student_bodies();
+        $post->sid=$id;
         $post->name=request('name');
         $post->idno=request('idno');
         $post->phno=request('phno');
         $post->bodyname=request('bname');
-        $post->bodyid=request('bid');
+        $post->email=request('email');
         $post->ispaid='NO';
         $post->save();
 

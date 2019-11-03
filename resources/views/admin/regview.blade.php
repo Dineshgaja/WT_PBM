@@ -3,7 +3,7 @@
 <?php $c=1;?>
 <table border="1">
 	<tr>
-		<th>Name</th><th>Body name</th><th>email id</th><th>Body id</th><th>Phno</th><th>pay status</th><th>mark as paid</th>
+		<th>Name</th><th>Body name</th><th>email id</th><th>Body id</th><th>Phno</th><th>pay status</th><th>Action</th>
 	</tr>
 	@if(count($reg1)>0)
 		@foreach($reg1 as $r)
@@ -16,7 +16,7 @@
 				<td>{{$r->phno}}</td>
 				<td>NO</td>
 				<td>
-					<button id="<?php $c;?>" onclick="<?php DB::update('update faculty_bodies set ispaid=? where fid=?',['YES',$r->fid]); echo "location.reload()"; $c++;?>"> Paid </button>
+					{{Form::select('act',['map'=>'Mark as paid','del'=>'Remove','edit'=>'edit details'])}}
 					
 				</td>
 			</tr>

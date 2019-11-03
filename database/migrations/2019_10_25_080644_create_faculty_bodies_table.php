@@ -18,7 +18,7 @@ class CreateFacultyBodiesTable extends Migration
             $table->string('name');
             $table->integer('idno');
             $table->string('bodyname');
-            $table->string('bodyid')->unique();
+            $table->string('bodyid');
             $table->string('paiddate');
         });
     }

@@ -11,10 +11,7 @@
         
         <h1>Registration Form</h1>
         {!! Form::open(['action' => 'registercontrol@store' , 'method'=> 'POST']) !!}
-        <div>
-        {{Form::label('type','type: ')}}
-        {{Form::select('type', ['F' => 'Faculty', 'S' => 'Student'], 'F')}}
-        </div>
+        <h1>Student Registration Form</h1>
         <div>
         {{Form::label('ID card no: ')}}
         {{Form::number('idno')}}
@@ -32,8 +29,8 @@
         {{Form::text('bname')}}
         </div>
         <div>
-        {{Form::label('bodyid: ')}}
-        {{Form::text('bid')}}
+        {{Form::label('email: ')}}
+        {{Form::text('email')}}
         </div>
         <div>
             {{Form::submit('Submit')}}
