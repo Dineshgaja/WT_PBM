@@ -52,20 +52,17 @@ class registercontrol extends Controller
         if ($c->count()==1) {
        
         $id=$c->first()->sid;
-        $check=student_bodies::where('idno',request('idno'))->get();
+        $check=student_bodies::where('idno',request('idno'))->where('bodyname',request('bname'));
         }
         else{
             echo "<script>alert(\"idcard number not found\");</script>";
             return view('register');
         }
-        if($check->count()!=0){
-            foreach ($check as $key) {
-                if($key->first()->bodyname==request('bname')){
-                    echo "<script>alert(\"this idno is already present with that bodyname\");</script>";
-                    return view('Home');
-                }
-            }
+        if($check->count()==1){
+            echo "<script>alert(\"this idno is already present with that bodyname\");</script>";
+            return view('Home');
         }
+        
 
         $post=new student_bodies();
         $post->sid=$id;
