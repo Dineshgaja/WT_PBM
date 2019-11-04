@@ -10,8 +10,12 @@
     <body>
         
         <h1>Registration Form</h1>
-        {!! Form::open(['action' => 'registercontrol@store' , 'method'=> 'POST']) !!}
-        <h1>Student Registration Form</h1>
+        @if($type=='student')
+        {!! Form::open(['url' => '/registercontrol/student' , 'method'=> 'POST']) !!}
+        @else
+        {!! Form::open(['url' => '/registercontrol/faculty' , 'method'=> 'POST']) !!}
+        @endif
+        <h1>{{$type}} Registration Form</h1>
         <div>
         {{Form::label('ID card no: ')}}
         {{Form::number('idno')}}

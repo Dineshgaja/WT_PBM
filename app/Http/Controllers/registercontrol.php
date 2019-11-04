@@ -38,7 +38,7 @@ class registercontrol extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request){
+    public function store(Request $request,$type){
         $this->validate($request,[
             'idno' => 'required',
             'name' => 'required',
@@ -47,16 +47,30 @@ class registercontrol extends Controller
             'email' => 'required'
         ]);
 
-        
-        $c=students::where('idno',request('idno'));
-        if ($c->count()==1) {
-       
-        $id=$c->first()->sid;
-        $check=student_bodies::where('idno',request('idno'))->where('bodyname',request('bname'));
+        if($type=='student'){
+            $c=students::where('idno',request('idno'));
         }
         else{
+            $c=faculties::where('idno',request('idno'));
+        }
+        if ($c->count()==1 and $type=='student') {
+       
+            $id=$c->first()->sid;
+            $check=student_bodies::where('idno',request('idno'))->where('bodyname',request('bname'));
+            $post=new student_bodies();
+            $post->sid=$id;
+        }
+        elseif($c->count()==1 and $type=='faculty') {
+       
+            $id=$c->first()->fid;
+            $check=faculty_bodies::where('idno',request('idno'))->where('bodyname',request('bname'));
+            $post=new faculty_bodies();
+            $post->fid=$id;
+        }
+        else{
+            //similarly i should check for all inputs like name emailid etc
             echo "<script>alert(\"idcard number not found\");</script>";
-            return view('register');
+            return view('register',['type'=>$type]);
         }
         if($check->count()==1){
             echo "<script>alert(\"this idno is already present with that bodyname\");</script>";
@@ -64,8 +78,7 @@ class registercontrol extends Controller
         }
         
 
-        $post=new student_bodies();
-        $post->sid=$id;
+        
         $post->name=request('name');
         $post->idno=request('idno');
         $post->phno=request('phno');

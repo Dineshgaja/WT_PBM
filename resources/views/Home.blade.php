@@ -85,7 +85,8 @@
                 </div>
 
                 <div class="links">
-                    <a href="http://wtbeta.com/register">Register</a>
+                    <a href="http://wtbeta.com/register/student">Student Register</a>
+                    <a href="http://wtbeta.com/register/faculty">Faculty Register</a>
                     <a href="http://wtbeta.com/events">Events</a>
                     <a href="http://wtbeta.com/">help</a>
                     <a href="http://forge.laravel.com">etc</a>

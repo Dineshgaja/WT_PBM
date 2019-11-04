@@ -13,8 +13,8 @@ class PagesController extends Controller
     public function index(){
         return view('adminlogin');
     }
-    public function regindex(){
-        return view('register');
+    public function regindex($type){
+        return view('register',['type'=>$type]);
     }
     public function eventindex(){
     	$events=  events::all();
