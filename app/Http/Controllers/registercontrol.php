@@ -70,7 +70,7 @@ class registercontrol extends Controller
         else{
             //similarly i should check for all inputs like name emailid etc
             echo "<script>alert(\"idcard number not found\");</script>";
-            return view('register',['type'=>$type]);
+            return "<script>window.history.back();</script>";
         }
         if($check->count()==1){
             echo "<script>alert(\"this idno is already present with that bodyname\");</script>";
