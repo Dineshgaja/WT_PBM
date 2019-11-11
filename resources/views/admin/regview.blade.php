@@ -16,7 +16,7 @@
 				<td>{{$r->phno}}</td>
 				<td>NO</td>
 				<td>
-					{{Form::select('act',['map'=>'Mark as paid','del'=>'Remove','edit'=>'edit details'])}}
+					<a href="http://wtbeta.com/admin/map/faculty/{{$r->bodyname}}/{{$r->fid}}"><button> Paid </button></a>
 					
 				</td>
 			</tr>
@@ -32,7 +32,7 @@
 <h2>Student Registrations</h2>
 <table border="1">
 	<tr>
-		<th>Name</th><th>Body name</th><th>Body id</th><th>Phno</th><th>pay status</th><th>mark as paid</th>
+		<th>Name</th><th>Body name</th><th>email id</th><th>Body id</th><th>Phno</th><th>pay status</th><th>mark as paid</th>
 	</tr>
 	@if(count($reg2)>0)
 		@foreach($reg2 as $r)
@@ -40,11 +40,12 @@
 			<tr>
 				<td>{{$r->name}}</td>
 				<td>{{$r->bodyname}}</td>
+				<td>{{$r->email}}</td>
 				<td>{{$r->bodyid}}</td>
 				<td>{{$r->phno}}</td>
 				<td>NO</td>
 				<td>
-					<button onclick=""> Paid </button>
+					<a href="http://wtbeta.com/admin/map/student/{{$r->bodyname}}/{{$r->sid}}"><button> Paid </button></a>
 					
 				</td>
 			</tr>

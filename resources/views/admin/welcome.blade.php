@@ -86,9 +86,9 @@
 
                 <div class="links">
                     <a href="http://wtbeta.com/admin/registrations">New Registrations</a>
-                    <a href="http://wtbeta.com/admin/facultyview">Faculty</a>
-                    <a href="http://wtbeta.com/admin/studentview">Student</a>
-                    <a href="http://wtbeta.com/admin/eventview">Events</a>
+                    <a href="http://wtbeta.com/admin/facultyview/all">Faculty</a>
+                    <a href="http://wtbeta.com/admin/studentview/all">Student</a>
+                    <a href="http://wtbeta.com/admin/eventview/view/0">Events</a>
                     <a href="https://nova.laravel.com">help</a>
                 </div>
             </div>
