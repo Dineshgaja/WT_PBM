@@ -1,6 +1,7 @@
 <?php
 use App\faculty_bodies;
 use App\student_bodies;
+use App\events;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +15,8 @@ use App\student_bodies;
 */
 
 Route::get('/', function () {
-    return view('Home');
+	$events=  events::all();
+    return view('events')->with('events',$events);
 });
 Route::get('/admin', 'PagesController@index');
 Route::get('/admin/registrations', 'PagesController@adminreg');
@@ -39,3 +41,7 @@ Route::get('/events', 'PagesController@eventindex');
 Route::post('/registercontrol/{type}','registercontrol@store');
 Route::post('/admin/reg/{act}/{type}/{bname}/{id}', 'PagesController@regmap');
 Route::get('/admin/remove/{type}/{bname}/{id}', 'PagesController@regremove');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

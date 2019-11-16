@@ -47,20 +47,20 @@ class registercontrol extends Controller
             'email' => 'required'
         ]);
 
-        if($type=='student'){
+        if($type=='Student'){
             $c=students::where('idno',request('idno'));
         }
         else{
             $c=faculties::where('idno',request('idno'));
         }
-        if ($c->count()==1 and $type=='student') {
+        if ($c->count()==1 and $type=='Student') {
        
             $id=$c->first()->sid;
             $check=student_bodies::where('idno',request('idno'))->where('bodyname',request('bname'));
             $post=new student_bodies();
             $post->sid=$id;
         }
-        elseif($c->count()==1 and $type=='faculty') {
+        elseif($c->count()==1 and $type=='Faculty') {
        
             $id=$c->first()->fid;
             $check=faculty_bodies::where('idno',request('idno'))->where('bodyname',request('bname'));
