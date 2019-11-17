@@ -162,12 +162,11 @@
     </head>
     <body>
         
-        
+                    @include('layouts.app') 
         <div class="paddiv">
+
             <div class="content">
-                <div class="title m-b-md" style="color: #00004d;">
-                    Professional body management
-                </div>                
+                               
                 <div class="row">
                   <div class="column" onclick="location.href='http://wtbeta.com/admin/studentview/all'">
                     <div class="card" style="background-color: #e60000;">Student</a></div>

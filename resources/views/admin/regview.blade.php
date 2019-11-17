@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
 	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -21,11 +20,7 @@
   	</style>
 </head>
 <body style="background-color: lightgrey;">
-	<div align="vertical">
-            <img src="https://image3.mouthshut.com/images/imagesp/925717933s.png" width="105px" style="background: white; float: left; display: inline-block;" >
-            <div class="mycard" style="color: red; background-color: white; display: inline-block; width: 93%">
-                <b style="color: blue; font-size: 30px;">BMS</b> <br>Institute Of Technology and Management</div>
-    </div>
+	@include('layouts.app')
 	<h6 class="display-4" style="text-align: center; margin-top: 20px"><b><i>REGISTRATIONS</i></b></h6>
 	<div class="container">	
 		<h2>Faculty Registrations</h2>

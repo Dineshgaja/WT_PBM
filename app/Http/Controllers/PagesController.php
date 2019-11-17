@@ -7,6 +7,7 @@ use App\events;
 use App\registations;
 use App\faculty_bodies;
 use App\student_bodies;
+use PDF;
 
 class PagesController extends Controller
 {
@@ -19,6 +20,17 @@ class PagesController extends Controller
     public function eventindex(){
     	$events=  events::all();
         return view('events')->with('events',$events);
+    }
+    public function pdf($type,$bname){
+        if($type=='F')
+            $data=faculty_bodies::all();
+           
+        elseif($type=='S')
+            $data=student_bodies::all();
+        else
+            return "something went wrong";
+        $pdf = PDF::loadView('pdf', ['data'=> $data,'bname'=>$bname]);
+        return $pdf->stream();
     }
 
     public function regremove($type,$bname,$id){

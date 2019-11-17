@@ -41,7 +41,7 @@ Route::get('/events', 'PagesController@eventindex');
 Route::post('/registercontrol/{type}','registercontrol@store');
 Route::post('/admin/reg/{act}/{type}/{bname}/{id}', 'PagesController@regmap');
 Route::get('/admin/remove/{type}/{bname}/{id}', 'PagesController@regremove');
-
+Route::get('/pdf/{type}/{bname}', 'PagesController@pdf');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

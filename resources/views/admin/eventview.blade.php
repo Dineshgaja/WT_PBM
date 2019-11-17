@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -33,16 +33,12 @@
   	</style>
 </head>
 <body style="background-color: lightblue;">
-	<div align="vertical">
-        <img src="https://image3.mouthshut.com/images/imagesp/925717933s.png" width="105px" style="background: white; float: left; display: inline-block;" >
-        <div class="mycard" style="color: red; background-color: white; display: inline-block; width: 93%">
-        <b style="color: blue; font-size: 30px;">BMS</b> <br>Institute Of Technology and Management</div>
-    </div>
+	@include('layouts.app')
     <h1 class="display-4" style="text-align: center; margin-top: 20px"><b><i>EVENTS</i></b></h1>
 
 @if($id==0 and $act=='view')
 	@if(count($events)>0)
-	<div>
+	<div style="height: 400px; overflow-y: auto;">
 		@foreach($events as $e)
 			<div class="container" style="margin-top: 20px">
 			<div class="card">
@@ -56,8 +52,9 @@
 		</div>
 		@endforeach
 		</table>
-		<a href="http://wtbeta.com/admin/eventview/adding/new" class="button" style="margin-left: 215px">+add</a>
-	</div>	
+		
+	</div>
+	<a href="http://wtbeta.com/admin/eventview/adding/new" class="button" style="margin-left: 215px">+add</a>	
 	@else
 		<p>No events found</p>
 	@endif

@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Professional Body Management</title>
     <style type="text/css">
         .mycard{
             box-shadow: 0 8px 12px 0 rgba(0.0, 0.0, 0.0, 0.2);
@@ -31,8 +31,8 @@
 <body>
     <div align="vertical">
         <img src="https://image3.mouthshut.com/images/imagesp/925717933s.png"
-        style="background: white; float: left; display: inline-block; width: 11.5%;" >
-        <div class="mycard" style="color: red; background-color: white; display: inline-block; width: 88.5%">
+        style="background: white; float: left; display: inline-block; width: 11.55%;" >
+        <div class="mycard" style="color: red; background-color: white; display: inline-block; width: 88.45%">
             <b style="color: blue; font-size: 30px;">BMS</b> <br>Institute Of Technology and Management</div>
     </div>
     <div id="app">

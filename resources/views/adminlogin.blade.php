@@ -1,5 +1,5 @@
 
-@extends('layouts.app')
+
 <!DOCTYPE html>
 <html>
     
@@ -115,7 +115,7 @@
                   <span class="invalid-feedback" role="alert">
                       <strong>{{ $message }}</strong>
                   </span>
-              @enderror
+                @enderror
             </div>
             <div class="input-group mb-2">
               <div class="input-group-append">

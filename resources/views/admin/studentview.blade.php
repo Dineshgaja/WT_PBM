@@ -82,5 +82,6 @@
 	@endif
 @endif
 	</div>
+	<a href="http://wtbeta.com/pdf/S/{{$bname}}"><button>Save as PDF</button></a>
 </body>
 </html>
