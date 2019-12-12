@@ -1,5 +1,6 @@
+<h1>Report</h1>
 @if($bname=='all')
-	<table border="1">
+	<table border="1" style="border-collapse: collapse;">
 		<thead >
 		<tr >
 			<th>NAME</th><th>PHNO</th><th>BODY NAME</th><th>BODY ID</th><th>PAID DATE</th>
@@ -20,7 +21,7 @@
 		@endforeach
 		</table>
 @else
-	<table border="1">
+	<table border="1" style="border-collapse: collapse;">
 		<thead>
 		<tr>
 			<th>NAME</th><th>PHNO</th><th>BODY NAME</th><th>BODY ID</th><th>PAID DATE</th>

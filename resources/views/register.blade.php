@@ -107,6 +107,15 @@
         
     </head>
     <body>
+        <div align="vertical">
+        <img src="https://image3.mouthshut.com/images/imagesp/925717933s.png"
+        style="background: white; float: left; display: inline-block; width: 7%;" >
+        <div class="mycard" style="color: red; background-color: white; display: inline-block; width: 93%">
+            <b style="color: blue; font-size: 30px;">BMS</b> <br>Institute Of Technology and Management
+            <a href="http://wtbeta.com/" style="float: right;"><button>Home</button></a></div>
+        
+    </div>
+    <br>
         <div class="container register">
             <div class="row">
                 <div class="col-md-3 register-left">

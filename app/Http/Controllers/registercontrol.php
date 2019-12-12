@@ -48,10 +48,10 @@ class registercontrol extends Controller
         ]);
 
         if($type=='Student'){
-            $c=students::where('idno',request('idno'));
+            $c=students::where('idno',request('idno'))->where('name',request('name'))->where('email',request('email'));
         }
         else{
-            $c=faculties::where('idno',request('idno'));
+            $c=faculties::where('idno',request('idno'))->where('name',request('name'))->where('email',request('email'));
         }
         if ($c->count()==1 and $type=='Student') {
        
@@ -69,12 +69,12 @@ class registercontrol extends Controller
         }
         else{
             //similarly i should check for all inputs like name emailid etc
-            echo "<script>alert(\"idcard number not found\");</script>";
+            echo "<script>alert(\"idcard number with that details not found\");</script>";
             return "<script>window.history.back();</script>";
         }
         if($check->count()==1){
             echo "<script>alert(\"this idno is already present with that bodyname\");</script>";
-            return view('Home');
+            return "<script>location.replace(\"http://wtbeta.com\");</script>";
         }
         
 
@@ -89,7 +89,7 @@ class registercontrol extends Controller
 
 
         echo "<script>alert(\"Sucessfully submitted\");</script>";
-        return view('Home');
+        return "<script>location.replace(\"http://wtbeta.com\");</script>";
     }
     public function regindex(){
         return view('register');

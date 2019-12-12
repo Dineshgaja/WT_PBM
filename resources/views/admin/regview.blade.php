@@ -42,7 +42,7 @@
 				<td>{{$r->phno}}</td>
 				<td>NO</td>
 				<td>
-					<a href="http://wtbeta.com/admin/map/faculty/{{$r->bodyname}}/{{$r->fid}}"><button> Paid </button></a>
+					<a href="http://wtbeta.com/admin/map/faculty/{{$r->bodyname}}/{{$r->fid}}"><button> Edit </button></a>
 					
 				</td>
 			</tr>
@@ -74,7 +74,7 @@
 				<td>{{$r->phno}}</td>
 				<td>NO</td>
 				<td>
-					<a href="http://wtbeta.com/admin/map/student/{{$r->bodyname}}/{{$r->sid}}"><button> Paid </button></a>
+					<a href="http://wtbeta.com/admin/map/student/{{$r->bodyname}}/{{$r->sid}}"><button> Edit </button></a>
 					
 				</td>
 			</tr>
